@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 import '../../../../core/database/app_database.dart';
 import '../../../../core/database/sync_queue_service.dart';
+import '../../../../core/di/injection.dart';
 import '../../../../core/error/either.dart';
 import '../../../../core/error/failures.dart';
 import '../../../../core/network/connectivity_service.dart';
@@ -118,10 +119,9 @@ class PosRepositoryImpl implements PosRepository {
     }
 
     // 3. Fallback to seed data (filtered by category if needed)
-    final seed = categoryId != null && categoryId.isNotEmpty
-        ? SeedData.products
-            .where((p) => p.categoryId == categoryId)
-            .toList()
+    final catId = categoryId;
+    final seed = catId != null && catId.isNotEmpty
+        ? SeedData.products.where((p) => p.categoryId == catId).toList()
         : SeedData.products;
     return Right(seed);
   }

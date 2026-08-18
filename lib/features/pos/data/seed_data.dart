@@ -1,4 +1,4 @@
-import '../../shared/models/product_model.dart';
+import '../../../shared/models/product_model.dart';
 
 /// Seed data untuk demo/fallback saat Supabase belum ada data atau gagal.
 /// Memungkinkan app tetap usable untuk testing UI/flow tanpa backend.
