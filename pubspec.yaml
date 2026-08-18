@@ -1,0 +1,76 @@
+name: pos_flutter
+description: "PostSA Cross-Platform Flutter POS & Multi-Outlet Management Application"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: '>=3.24.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI Icons & Styling
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  lucide_icons: ^0.257.0
+  flutter_spinkit: ^5.2.1
+  cached_network_image: ^3.3.1
+  fl_chart: ^0.68.0
+
+  # State Management & Architecture
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  get_it: ^7.7.0
+
+  # Backend & Supabase Integration
+  supabase_flutter: ^2.8.0
+  http: ^1.2.1
+  web_socket_channel: ^3.0.0
+
+  # Offline-First Local Database (Drift / SQLite)
+  drift: ^2.20.0
+  drift_flutter: ^0.2.4
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.5
+  connectivity_plus: ^6.0.5
+
+  # Hardware & Thermal Printer
+  # NOTE: `esc_pos_utils_2` referenced in the original PRD does not exist on
+  # pub.dev. Printer ESC/POS generator will be picked in FASE 6 (PLAN.md)
+  # when the real ThermalPrinterService is implemented. The stub in
+  # lib/core/printer/thermal_printer_service.dart does not need it yet.
+  flutter_pos_printer_platform_image_3_sdt: ^1.2.24
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.1.1
+
+  # Location & Navigation
+  geolocator: ^12.0.0
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+
+  # Utilities
+  intl: ^0.20.0
+  audioplayers: ^6.0.0
+  shared_preferences: ^2.2.3
+  uuid: ^4.5.1
+  crypto: ^3.0.7
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Drift code generation
+  build_runner: ^2.4.13
+  drift_dev: ^2.20.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/audio/

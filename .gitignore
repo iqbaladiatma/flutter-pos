@@ -1,0 +1,49 @@
+# Build artifacts
+build/
+**/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+pubspec.lock
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+*.keystore
+*.jks
+
+# iOS
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Windows
+windows/flutter/ephemeral/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Secrets / local config
+*.local.ps1
+run_dev.local.ps1
+.env
+.env.local
+
+# Generated
+.dart_tool/
+*.g.dart
+lib/l10n/generated/
+
+# OS
+.DS_Store
+Thumbs.db
